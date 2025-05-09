@@ -1,4 +1,3 @@
-# llm-prompt-engineering-guide
 # 🧠 The Ultimate Guide to Prompt Engineering & Training Large Language Models (LLMs)
 
 ### ✍️ By Eva Paunova – Senior PM, LLMs & Applied AI Systems
