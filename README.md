@@ -48,3 +48,165 @@ Prompt engineering is the science of designing inputs to steer an LLM's behavior
 
 ### Types of Prompts:
 - **Zero-shot**: No examples  
+- **Few-shot**: 1–5 demos  
+- **Chain-of-thought**: Encourages stepwise reasoning  
+- **Self-refinement**: Prompts that ask the model to critique/improve its own output  
+- **Contrastive**: Provide multiple options to compare and improve
+
+---
+
+## 🧩 3. Prompt Taxonomy & Structures
+
+Based on [LearnPrompting.org](https://learnprompting.org):
+
+### Prompt Components:
+- **Instruction**: “Summarize the following:”  
+- **Context**: Background definitions  
+- **Input**: User’s content  
+- **Output Indicator**: “Answer:” or `\n`
+
+### Prompt Purposes:
+- Information-seeking  
+- Creative generation  
+- Reasoning and logic  
+- Tool invocation (e.g., ReAct prompting)
+
+---
+
+## 🧹 4. Dataset Preparation
+
+### Common Data Sources:
+- Web: Common Crawl, Wikipedia, news  
+- Structured: Books3, ArXiv, GitHub  
+- Instructional: ShareGPT, FLAN, Dolly, Alpaca  
+- Domain-specific: Legal, medical, financial corpora
+
+### Processing Steps:
+- De-duplication (MinHash, SHA)  
+- Language detection  
+- Toxicity filtering  
+- Tokenization  
+- Tiered sampling
+
+---
+
+## 🔧 5. Pretraining the LLM
+
+Goal: Teach the model general linguistic knowledge.
+
+### Architecture:
+- Decoder-only transformer  
+- Context size: 2K–128K tokens  
+- 6B to 180B parameters (depending on scale)
+
+### Training Loop:
+- Objective: Causal Language Modeling (CLM)  
+- Optimizer: AdamW + warmup/cosine decay  
+- Precision: fp16, bf16  
+- Techniques: DeepSpeed, Megatron, FSDP
+
+> Run on thousands of A100/H100 GPUs over 4–10 weeks.
+
+---
+
+## 🧪 6. Supervised Fine-tuning (SFT)
+
+### Purpose:
+Adapt the model to follow human instructions.
+
+### Data:
+- Prompt–response pairs  
+- Human-labeled or synthetic  
+- Diverse tasks: summarization, Q&A, coding, reasoning
+
+### Method:
+- Lower learning rate (e.g., 1e-5)  
+- 3–10 training epochs  
+- Monitor validation perplexity
+
+---
+
+## 🎮 7. RLHF – Reinforcement Learning with Human Feedback
+
+### Goal:
+Align models with human values (helpfulness, harmlessness, honesty).
+
+### Steps:
+1. Generate responses per prompt  
+2. Rank responses via human annotators  
+3. Train a reward model  
+4. Optimize base model using PPO (Proximal Policy Optimization)
+
+### Tools:
+- HuggingFace TRL  
+- OpenAI’s PPO pipelines  
+- Constitutional AI (Claude-style alignment)
+
+---
+
+## 🔬 8. Advanced Prompt Techniques
+
+- **ReAct**: Reason and act with tools  
+- **Self-consistency**: Sample multiple outputs, vote  
+- **Toolformer**: Model selects API calls in-line  
+- **Reflexion**: Self-critique and revise  
+- **Persona conditioning**: Control tone, empathy, professionalism
+
+---
+
+## 🧪 9. Evaluation & Alignment
+
+### Quantitative Metrics:
+- BLEU, ROUGE, BERTScore  
+- TruthfulQA, Winogrande, MMLU
+
+### Human Eval:
+- Pairwise comparisons  
+- Scoring on coherence, logic, safety  
+- Adversarial red-teaming
+
+### Alignment Approaches:
+- Refusal training  
+- Self-reflection  
+- Rule-based prompting (e.g., Constitutional AI)
+
+---
+
+## 🚀 10. Production Best Practices
+
+### Infra:
+- Quantization (4-bit, 8-bit)  
+- LoRA/PEFT for cost-effective finetuning  
+- Inference: Triton, vLLM, HuggingFace Inference Endpoints
+
+### Safety:
+- Guardrails and filters  
+- Abuse detection  
+- Logging + continuous feedback loops
+
+---
+
+## 📚 11. Glossary & Resources
+
+**LLM** – Large Language Model  
+**SFT** – Supervised Fine-tuning  
+**RLHF** – Reinforcement Learning from Human Feedback  
+**PPO** – Proximal Policy Optimization  
+**Token** – Subword unit (e.g., “inter”, “esting”)
+
+### Further Reading:
+- [LearnPrompting.org](https://learnprompting.org)  
+- HuggingFace TRL & PEFT Docs  
+- OpenAI Cookbook  
+- Anthropic’s Claude Prompting Guide  
+- Stanford HELM  
+- Scaling Laws for Neural LMs (Kaplan et al.)
+
+---
+
+## 🎓 Final Note
+
+Whether you're developing enterprise-grade models or launching lightweight LLMs, **prompt engineering and alignment** are your most critical tools. Prompting is not just input—it’s how we steer, constrain, and elevate model intelligence.  
+
+🧠 *Explore. Iterate. Align.*  
+— **Eva Paunova**
