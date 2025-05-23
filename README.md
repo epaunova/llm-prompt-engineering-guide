@@ -193,14 +193,7 @@ Question: {question}
 Think step-by-step and explain your reasoning.  
 Answer: {answer}  
 """
----
-**
-
----
-
-## 📚 11. Glossary & Resources
-
-**Token** – Subword unit (e.g., “inter”, “esting”)
+```
 
 ## 🚀 Live Demo
 
