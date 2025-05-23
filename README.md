@@ -196,13 +196,8 @@ Answer: {answer}
 
 ## 📚 11. Glossary & Resources
 
-**LLM** – Large Language Model  
-**SFT** – Supervised Fine-tuning  
-**RLHF** – Reinforcement Learning from Human Feedback  
-**PPO** – Proximal Policy Optimization  
 **Token** – Subword unit (e.g., “inter”, “esting”)
 
 ## 🚀 Live Demo
 
 [![Open in Spaces](https://img.shields.io/badge/🤗_HuggingFace-Open%20in%20Spaces-blue)](https://huggingface.co/spaces/evapaunova/toxicity-analyzer)
-
