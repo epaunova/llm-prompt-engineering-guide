@@ -193,8 +193,6 @@ Question: {question}
 Think step-by-step and explain your reasoning.  
 Answer: {answer}  
 """
-## 🚀 Live Demo  
-[![Open in Spaces](https://img.shields.io/badge/🤗_HuggingFace-Open%20in%20Spaces-blue)](https://huggingface.co/spaces/evapaunova/toxicity-analyzer)
 
 ## 📚 11. Glossary & Resources
 
@@ -204,12 +202,6 @@ Answer: {answer}
 **PPO** – Proximal Policy Optimization  
 **Token** – Subword unit (e.g., “inter”, “esting”)
 
-### Further Reading:
-- [LearnPrompting.org](https://learnprompting.org)  
-- HuggingFace TRL & PEFT Docs  
-- OpenAI Cookbook  
-- Anthropic’s Claude Prompting Guide  
-- Stanford HELM  
-- Scaling Laws for Neural LMs (Kaplan et al.)
+## 🚀 Live Demo
 
-
+[![Open in Spaces](https://img.shields.io/badge/🤗_HuggingFace-Open%20in%20Spaces-blue)](https://huggingface.co/spaces/evapaunova/toxicity-analyzer)
