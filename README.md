@@ -192,7 +192,10 @@ template = """
 Question: {question}  
 Think step-by-step and explain your reasoning.  
 Answer: {answer}  
-"""  
+"""
+## 🚀 Live Demo  
+[![Open in Spaces](https://img.shields.io/badge/🤗_HuggingFace-Open%20in%20Spaces-blue)](https://huggingface.co/spaces/evapaunova/toxicity-analyzer)
+
 ## 📚 11. Glossary & Resources
 
 **LLM** – Large Language Model  
