@@ -205,3 +205,4 @@ Answer: {answer}
 ## 🚀 Live Demo
 
 [![Open in Spaces](https://img.shields.io/badge/🤗_HuggingFace-Open%20in%20Spaces-blue)](https://huggingface.co/spaces/evapaunova/toxicity-analyzer)
+
