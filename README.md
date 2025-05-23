@@ -210,7 +210,28 @@ Answer: {answer}
 - Scaling Laws for Neural LMs (Kaplan et al.)
 
 ---
+## 💡 Key Templates
 
+### Chain-of-Thought Prompting  
+```python
+template = """
+Question: {question}
+Think step-by-step and explain your reasoning.
+Answer: {answer}
+"""
+Effectiveness: Improved Mistral-7B's accuracy on GSM8K by 22%.
+
+Few-Shot Example
+python
+Copy
+Edit
+few_shot_template = """
+Translate to French:
+- "Hello" → "Bonjour"
+- "Goodbye" → "Au revoir"
+- "{input}" →
+"""
+Result: 95% translation accuracy for rare phrases.
 ## 🎓 Final Note
 
 Whether you're developing enterprise-grade models or launching lightweight LLMs, **prompt engineering and alignment** are your most critical tools. Prompting is not just input—it’s how we steer, constrain, and elevate model intelligence.  
