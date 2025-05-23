@@ -197,4 +197,6 @@ Answer: {answer}
 
 ## 🚀 Live Demo
 
+Try the interactive toxicity analyzer below, powered by 🤗 Hugging Face Spaces!
+
 [![Open in Spaces](https://img.shields.io/badge/🤗_HuggingFace-Open%20in%20Spaces-blue)](https://huggingface.co/spaces/evapaunova/toxicity-analyzer)
